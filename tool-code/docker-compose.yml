@@ -1,0 +1,23 @@
+
+version: '3'
+
+services:
+  data_service:
+    build: ./data_service
+    ports:
+      - "5002:5000"
+  
+  encoding_service:
+    build: ./encoding_service
+    ports:
+      - "5003:5000"
+
+  recommendation_service:
+    build: ./recommendation_service
+    ports:
+      - "5004:5000"
+
+  api_gateway:
+    build: ./api_gateway
+    ports:
+      - "5001:5000"
